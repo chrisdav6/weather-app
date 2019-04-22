@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="shortcut icon" href="/img/icon.png" type="image/x-icon">
+  <title>Weather App</title>
+</head>
+
+<body>
+  {{>header}}
+
+  <div class="main-content">
+    <div class="container">
+      <h1>Weather</h1>
+      <p>Use this app to get your weather</p>
+
+      <div class="row">
+        <div class="col-md-6">
+          <form class="my-5" id="getWeather">
+            <div class="input-group">
+              <input class="form-control" type="text" name="address" id="address" placeholder="Enter your Address">
+              <div class="input-group-append">
+                <button class="btn btn-success">Get Weather</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <h3 class="message1"></h3>
+      <p class="message2"></p>
+    </div>
+  </div>
+
+  {{>footer}}
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+
+</html>

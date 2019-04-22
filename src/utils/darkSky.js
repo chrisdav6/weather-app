@@ -15,12 +15,13 @@ const darkSky = (lat, lon, callback) => {
       let summary = body.daily.data[0].summary;
       let tempHigh = Math.round(body.daily.data[0].temperatureHigh);
       let tempLow = Math.round(body.daily.data[0].temperatureLow);
-      let message = `It's currently ${deg} degrees out. There is a ${rain}% chance of rain. ${summary}`;
 
       let weatherData = {
+        deg: deg,
+        rain: rain,
+        summary: summary,
         tempHigh: tempHigh,
-        tempLow: tempLow,
-        message: message
+        tempLow: tempLow
       }
 
       callback(undefined, weatherData);
